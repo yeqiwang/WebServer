@@ -50,3 +50,22 @@ int main() {
     1. 代码保密
     2. 方便部署和分发
 
+## 项目目录内容及静态库示例
+- main.cpp 入口文件
+- include 头文件目录
+- lib 库文件目录
+- src 源文件
+
+使用src中的源文件，制作静态库
+g++ -c add.cpp minis.cpp -I ../include/
+ar rcs libcalc.a minis.o add.o
+
+将创建的静态库移动到lib中
+mv libcalc.a ../lib/
+
+使用静态库编译main.cpp
+g++ main.cpp -o mian -I include/ -L lib/ -l calc
+
+ps. g++中，-I 指定头文件位置，-L 指定库文件位置，-l 指定库文件
+
+
