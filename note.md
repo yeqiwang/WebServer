@@ -18,12 +18,12 @@ study the webserver!
 2. GCC和G++可以编译c代码和c++代码
 
 ## GCC常用选项
-g++ test.cpp -E -o test.i 预处理
-g++ test.i -S -o test.s 编译
-g++ test.s -s -o test.o 汇编链接
-g++ -c xxx.cpp xxx.cpp 只汇编不连接
+- g++ test.cpp -E -o test.i 预处理
+- g++ test.i -S -o test.s 编译
+- g++ test.s -s -o test.o 汇编链接
+- g++ -c xxx.cpp xxx.cpp 只汇编不连接
 
-g++ test.cpp -o test -DDEBUG
+- g++ test.cpp -o test -DDEBUG
 ```c++
 int main() {
 #ifdef DEBUG
@@ -52,7 +52,7 @@ int main() {
     1. 代码保密
     2. 方便部署和分发
 
-## 项目目录内容及静态库示例
+## 项目目录内容及静态库示例(lession03代码)
 - main.cpp 入口文件
 - include 头文件目录
 - lib 库文件目录
