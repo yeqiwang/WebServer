@@ -1,0 +1,56 @@
+root@VM-12-8-ubuntu:/etc#  cd 
+root@VM-12-8-ubuntu:~# ls
+log.txt  MyPoorWebServer  nohup.out  os  qt-everywhere-src-5.14.2  qt-everywhere-src-5.14.2.tar  server  workspace
+root@VM-12-8-ubuntu:~# cd workspace/
+root@VM-12-8-ubuntu:~/workspace# ls
+erfen  git_test  MiniWebServer  PAT  test2  WebServer
+root@VM-12-8-ubuntu:~/workspace# cd WebServer/
+root@VM-12-8-ubuntu:~/workspace/WebServer# ls
+lession02  lession03  lession04  note.md
+root@VM-12-8-ubuntu:~/workspace/WebServer# git push origin
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 7.45 KiB | 401.00 KiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:yeqiwang/WebServer.git
+   5dbff19..e3fef5b  main -> main
+root@VM-12-8-ubuntu:~/workspace/WebServer# ls
+lession02  lession03  lession04  lession05  note.md
+root@VM-12-8-ubuntu:~/workspace/WebServer# man 2 open
+root@VM-12-8-ubuntu:~/workspace/WebServer# man 2 open
+root@VM-12-8-ubuntu:~/workspace/WebServer# ls
+file  lession02  lession03  lession04  note.md
+root@VM-12-8-ubuntu:~/workspace/WebServer# cd file/
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# g++ open.cpp -o open
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# ./open 
+open: No such file or directory
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# ./open 
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# man 2 open
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# umask
+0022
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# g++ create.cpp.cpp -o create
+g++: error: create.cpp.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# g++ create.cpp -o create
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# ./create 
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# man 2 read
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# man 2 write
+root@VM-12-8-ubuntu:~/workspace/WebServer/file# cd copy/
+root@VM-12-8-ubuntu:~/workspace/WebServer/file/copy# ls
+copyFile.cpp  test.txt
+root@VM-12-8-ubuntu:~/workspace/WebServer/file/copy# g++ copyFile.cpp -o copyFile
+root@VM-12-8-ubuntu:~/workspace/WebServer/file/copy# ./copyFile 
+root@VM-12-8-ubuntu:~/workspace/WebServer/file/copy# ls
+copyFile  copyFile.cpp  test1.txt  test.txt
+root@VM-12-8-ubuntu:~/workspace/WebServer/file/copy# ll
+total 40
+drwxr-xr-x 2 root root  4096 Aug  1 15:01 ./
+drwxr-xr-x 3 root root  4096 Aug  1 14:46 ../
+-rwxr-xr-x 1 root root 16928 Aug  1 15:01 copyFile*
+-rw-r--r-- 1 root root  1224 Aug  1 15:00 copyFile.cpp
+-rw-r--r-- 1 root root     1 Aug  1 15:01 test1.txt
+-rw-r--r-- 1 root root   590 Aug  1 14:54 test.txt

@@ -82,7 +82,7 @@ g++ main.cpp -o mian -I include/ -L lib/ -l calc
 
 ps. g++中，-I 指定头文件位置，-L 指定库文件位置，-l 指定库文件
 
-## 动态库示例(lession03代码)
+## 动态库示例(lession04代码)
 
 1. 使用src中的源文件，制作动态库
 g++ -c -fpic add.cpp minis.cpp -I ../include/
@@ -133,7 +133,15 @@ g++ main.cpp -o mian -I include/ -L lib/ -l calc
 
 # lession 4 
 
-## makefile
+## Makefile
 定义一系列的规则来指导项目的编译过程
 
-
+## 虚拟内存空间
+- 用户区 0-3G
+  - .text 代码段
+  - .data 已初始化的全局变量
+  - .bss 未初始化的全局变量
+  - 堆空间 低地址 -> 高地址
+  - 共享库
+  - 栈空间 高地址 -> 低地址
+- 内核区 3-4G
